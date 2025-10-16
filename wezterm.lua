@@ -1,9 +1,13 @@
 local Config = require('config')
 
+-- see https://github.com/Sokyoei/data
+local data_dir = os.getenv('SOKYOEI_DATA_DIR')
+if data_dir and data_dir ~= '' then
+   require('utils.backdrops'):set_images_dir(data_dir .. '/Ahri/')
+end
+
 require('utils.backdrops')
    -- :set_focus('#000000')
-   -- see https://github.com/Sokyoei/data
-   :set_images_dir(os.getenv('SOKYOEI_DATA_DIR') .. '/Ahri/')
    :set_images()
    :random()
 
