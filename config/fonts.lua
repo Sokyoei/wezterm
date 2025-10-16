@@ -8,9 +8,12 @@ local font_family = 'CaskaydiaCove Nerd Font'
 local font_size = platform.is_mac and 12 or 10
 
 return {
-   font = wezterm.font({
-      family = font_family,
-      weight = 'Regular',
+   font = wezterm.font_with_fallback({
+      {
+         family = font_family,
+         weight = 'Regular',
+      },
+      'Noto Sans CJK SC' -- Ubuntu default CJK font
    }),
    font_size = font_size,
 
