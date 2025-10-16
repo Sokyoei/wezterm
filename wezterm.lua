@@ -2,7 +2,8 @@ local Config = require('config')
 
 require('utils.backdrops')
    -- :set_focus('#000000')
-   -- :set_images_dir(require('wezterm').home_dir .. '/Pictures/Wallpapers/')
+   -- see https://github.com/Sokyoei/data
+   :set_images_dir(os.getenv('SOKYOEI_DATA_DIR') .. '/Ahri/')
    :set_images()
    :random()
 
