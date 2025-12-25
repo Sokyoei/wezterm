@@ -21,6 +21,13 @@ if platform.is_win then
          }
       },
       {
+         label = 'Anaconda Powershell Prompt(pwsh)',
+         args = {
+            'pwsh.exe', '-ExecutionPolicy', 'ByPass', '-NoExit',
+            '-Command', "& 'D:\\Anaconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'D:\\Anaconda3' "
+         }
+      },
+      {
          label = 'Anaconda Command Prompt',
          args = {
             'c:\\Windows\\System32\\cmd.exe', "/K", 'D:\\Anaconda3\\Scripts\\activate.bat', 'D:\\Anaconda3'
